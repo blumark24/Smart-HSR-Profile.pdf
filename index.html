@@ -3,27 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart HSR - الملف التعريفي</title>
+  <title>Smart HSR — الملف التعريفي</title>
   <style>
+    :root {
+      --turquoise: #0EA5A1;
+      --navy: #0B2B3A;
+    }
     body {
-      background: #0b2b3a;
-      color: #e8f4f4;
-      font-family: 'Tajawal', sans-serif;
-      text-align: center;
       margin: 0;
       padding: 0;
+      font-family: "Tajawal", sans-serif;
+      background: linear-gradient(180deg, var(--navy), #0e2330, #081722);
+      color: #e8f4f4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
+    header {
+      width: 100%;
+      background: rgba(14, 165, 161, 0.15);
+      backdrop-filter: blur(6px);
+      text-align: center;
+      padding: 20px 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: var(--turquoise);
+    }
+
+    header p {
+      margin-top: 5px;
+      color: #c7e8e8;
+      font-size: 0.95rem;
+    }
+
     iframe {
       width: 90%;
-      height: 90vh;
+      height: 85vh;
       border: none;
-      border-radius: 20px;
+      border-radius: 18px;
       margin-top: 20px;
+      box-shadow: 0 0 25px rgba(14, 165, 161, 0.25);
+    }
+
+    footer {
+      width: 100%;
+      text-align: center;
+      margin: 30px 0 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(180deg, var(--turquoise), #0a8c88);
+      color: #062226;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 14px;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(14, 165, 161, 0.4);
+    }
+
+    @media (max-width: 768px) {
+      iframe {
+        width: 95%;
+        height: 75vh;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>📘 Smart HSR — الملف التعريفي</h1>
-  <iframe src="Smart%20HSR%20-%20Profile%20🏙️.pdf"></iframe>
+  <header>
+    <h1>📘 Smart HSR — الملف التعريفي</h1>
+    <p>اكتشف نظام المدن الذكية والتحول الرقمي من الميدان.</p>
+  </header>
+
+  <iframe 
+    src="Smart-HSR-Profile.pdf"
+    title="Smart HSR Profile PDF">
+  </iframe>
+
+  <footer>
+    <a href="Smart-HSR-Profile.pdf" download class="btn">⬇️ تنزيل الملف التعريفي</a>
+  </footer>
 </body>
 </html>
